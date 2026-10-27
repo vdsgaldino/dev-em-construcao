@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0203 - Estrutura HTML</title>
+</head>
+<body>
+    <h1>
+        0203 - Estrutura HTML
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0202.html">Aula anterior</a> <br>
+        <p>
+            Nessa aula vamos falar sobre a estrutura de um documento HTML. Eu vou colocar o código aqui por partes e vou explicando por partes e juntando tudo pra ficar mais de boa.
+        </p>
+        <p>
+            A primeira parte do documento HTML é usar a tag <STRONG>&lt;!DOCTYPE html&gt</STRONG>;. Essa tag é a que vai indicar para o browser que aquilo é um documento do tipo HTML.
+        </p>
+        <p>
+            Outra tag importante é a tag <strong>&lt;html&gt</strong>;. Nela a gente pode incluir alguns atributos e um deles é o lang, que serve pra dizer em qual idioma é construída aquela página HTML. Então na prática ficaria assim: <strong>&lt;html lang="pt-br"&gt;</strong>
+        </p>
+        <p>
+            A tag <strong>&lt;meta&gt;</strong> é usada pra fazer outros tipos de configurações e um deles é dizer pro navegador aceitar caracteres especiais, através do atributo <strong>&lt;meta charset="UTF-8"&gt;</strong>. Ela vai dentro da tag head que vou explicar no próximo parágrafo.
+        </p>
+        <p>
+            Pra fechar, tem mais duas muito importantes que são as tags <strong>head</strong> e <strong>body</strong>. Dentro da tag head é onde vão ficar as configurações da página que o usuário não precisa ver, como por exemplo vinculos de links com outros arquivos do projeto, ou então aquilo da tag meta que eu falei anteriormente. <br> Na tag body é onde vai ficar todo o conteúdo da página, ou seja, tudo aquilo que o usuário vai ver, os textos, imagens, vídeos, links clicáveis, etc.
+        </p>
+        <p>
+            Se eu juntar tudo ficaria mais ou menos assim: 
+            <pre>
+                &lt;!DOCTYPE html>
+                &lt;html lang="en">
+                &lt;head>
+                    &lt;meta charset="UTF-8">
+                    &lt;title>Titulo da páginat</title>
+                &lt;/head>
+                &lt;body>
+                    Conteudo do site, textos, paragrafos, imagens, titulos...    
+                &lt;/body>
+                &lt;/html>
+            </pre>
+        </p>
+        <p>
+            Então, toda a parte dos conteúdos que a gente faz pro site fica dentro da tag body e todas as outras configurações ficam na tag head.
+        </p>
+</body>
+</html>
