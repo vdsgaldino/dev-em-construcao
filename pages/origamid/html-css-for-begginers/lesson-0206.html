@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0206 - Caminhos de Link</title>
+</head>
+<body>
+    <h1>
+        0206 - Caminhos de Link
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0205.html">Aula anterior</a> <br>
+    <!-- <a href="lesson-0206.html">Próxima Aula</a> -->
+    <p>
+        Existem basicamente 2 tipos de caminhos que ele descreve nessa aula: Absoluto e Relativo
+    </p>
+    <h2>
+        Absoluto
+    </h2>
+    <p>
+        O caminho absoluto sempre é utilizado para links externos ao nosso projeto, que podem estar na web por exemplo. Ele é o caminho completo até uma determinada parte. <br> Exemplo:
+        <pre>
+            <code>
+                &lt;a href="<span style="color: red;">https://www.origamid.com/cursos</span>">Origamid Cursos&lt;/a>
+            </code>
+        </pre>
+        Aqui mostra o caminho completo desde a raiz até onde eu quero chegar.
+    </p>
+    <h2>
+        Relativo
+    </h2>
+    <p>
+        Já o relativo é usado para arquivos internos do próprio projeto. Ele mostra o caminho para chegar em determinado arquivo ou pasta com base na pasta onde você está no momento. <br> Exemplo:
+        <pre>
+            <code>
+                &lt;a href="<span style="color: red;">/produtos/bicicleta.html</span>">Bicicletas&lt;/a>
+            </code>
+        </pre>
+        Aqui não é o caminho completo desde a raiz, e sim da pasta onde eu estou até chegar onde eu quero.
+    </p>
+    <p>
+        Para navegar no link eu posso usar:
+        <ul>
+            <li>
+                / : aqui ele entende como eu buscando com base em um caminho anterior  que vem desde o diretório raiz.
+            </li>
+            <li>
+                ./ ou "deixar sem nada na frente": ele entende que eu quero procurar por aquele arquivo a partir da pasta atual onde eu estou.
+            </li>
+            <li>
+                ../ : faz a busca na pasta anterior a pasta atual. Posso utilizar isso várias vezes e ir voltando as pastas.
+            </li>
+            <li>
+                atalho CTRL + Espaço: ele lista pra mim todos os arquivos que tenho naquela pasta e eu posso usar a interface para navegar ao invés de escrever o caminho do arquivo.
+            </li>
+        </ul>
+    </p>
+    <p>
+
+    </p>
+
+</body>
+</html>
