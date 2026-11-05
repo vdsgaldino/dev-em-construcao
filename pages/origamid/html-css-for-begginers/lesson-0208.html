@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0208 - Seletores CSS</title>
+</head>
+<body>
+    <style>
+        #testeId {
+            color: green;
+            text-decoration: underline;
+        }
+
+        #testeId2 {
+            color: purple;
+            font-style: italic;
+        }
+
+        .testeClass {
+            color: red;
+            font-size: 20px;
+        }    
+
+        code {
+            color: darkgreen;
+            font-size: 20px;
+        }
+
+        #codigo {
+            color: red;
+            font-weight: bold;
+        }
+
+        .azul {
+            color: blue;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        #final {
+            color: goldenrod;
+            font-size: 40px;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+
+    <h1 class="azul underline">
+        0208 - Seletores CSS
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0207.html">Aula anterior</a> <br>
+    <!-- <a href="lesson-0208.html">Próxima Aula</a> -->
+    <p>
+        Continuando sobre a aula passada, nessa vamos focar mais nos seletores. Além da maneira como foi apresentada no exemplo da aula anterior, também podemos informar que seletores diferentes podem usar o meu bloco de caracteristicas. Pra fazer isso basta separar eles por virgula.
+        <pre>
+            <code>
+                h1, h2 {
+                    color: red;
+                }
+            </code>
+        </pre> 
+        Nesse caso, tanto as tags h1 quanto h2 vão receber a cor vermelha no documento HTML.
+    </p>
+    <p>
+        Outra coisa que podemos fazer também é dizer que queremos que o bloco valha apenas para um seletor que está dentro de outro.
+        <pre>
+            <code>
+                p a {
+                    color: blue;
+                }
+            </code>
+        </pre>
+        Nesse exemplo eu estou indicando que quero que o bloco de configurações seja aplicado apenas nos elementos de tag "a" que estejam dentro dos elementos de tag "p". Ou seja, é uma relação de herança onde "a" é filho de "p".
+    </p>
+    <p>
+        Beleza, esses seletores aplicam os blocos de estilo de forma global, ou seja, para todos os itens no documento que tenham aquela etiqueta que eu apontei. Mas, e se eu quiser que um bloco sirva apenas para um item "h2" específico e não altere os outros "h2" do documento? <br> É ai que utilizamos os ID's e as CLASSES.
+    </p>
+    <h2 id="testeId">
+        Id (#)
+    </h2>
+    <p>
+        O Id é utilizado quando eu quero que algum estilo sirva apenas para um UNICO elemento HTML. Na verdade nada me impede de usar o mesmo Id em dois elementos diferentes, visualmente ele até aplica as mudanças, mas lá na frente quando formos incorporar a linguagem de programação no site (no caso o JavaScript) isso pode gerar vários problemas.
+    </p>
+    <h3 class="testeClass">
+        No CSS
+    </h3>
+    <p>
+        Para definir um Id eu primeiro defino um nome pra ele, colocando um # no começo do nome. pra identificar ele como Id. Depois disso posso construir o bloco de estilo normalmente.
+    </p>
+    <pre>
+        <code>
+            #testeId {
+                color: green;
+                text-decoration: underline;
+            }
+        </code>
+    </pre>
+    <h3 class="testeClass">
+        No HTML
+    </h3>
+    <p>
+        Agora que já criei o Id eu preciso atribuir ele pra algum elemento HTML. para isso eu vou no elemento que eu quero e dentro dele escrevo id="nome_do_id" Vou usar esse mesmo Id do exemplo para o título h2 ali em cima. Pode reparar que ele ficou exatamente com a configuração que passei no bloco do id, a cor verde e a decoração com underline.
+    </p>
+    <pre>
+        <code>
+            &lt;h1 id="testeId">texto de exemplo&lt;/h1>
+        </code>
+    </pre>
+    <h2 id="testeId2">
+        Class (.)
+    </h2>
+    <p>
+        A Class eu utilizado quando quero aplicar o mesmo estilo para MAIS DE UM elemento html. Ele vai seguir a mesma lógica do Id na hora de criar, mas no lugar do "#" eu identifico ele com um ".".
+        <pre>
+            <code>
+                .testeClass {
+                    color: red;
+                    font-size: 20px;
+                } 
+            </code>
+        </pre>
+        Como a Class eu posso usar em mais de um item, eu vou aplicar essas configurações nos dois subtítulos anteriores ali da parte do Id, seguindo a mesma lógica: vou no item e escrevo na tag class="nome_da-classe".
+    </p>
+    <p>
+        Se por acaso eu precisasse aplicar esse mesma configuração do id para um outro elemento HTML que também tenha a mesma tag, o ideal seria cria uma Class e não um Id. Agora eu vou criar um outro Id e aplicar ele nesse outro titulo h2 do "Class (.)"
+        <pre>
+            <code id="codigo">
+                #testeId2 {
+                    color: purple;
+                    font-style: italic;
+                }
+            </code>
+        </pre>
+    </p>
+    <p>
+        Uma das vantagens de utilizar Id's e Classes é que eu consigo estilizar elementos de forma mais específica e outra é que eles não dependem do tag HTML que é usada naquele elemento, o que vai importar é o nome do Id ou da Class que eu atribui para ele.
+    </p>
+    <p>
+        Uma ideia que tive agora foi estilizar essas partes de código dos exemplos que coloquei. Pra isso eu identifico essas partes com a tag "code", então eu vou criar no meu arquivo CSS uma estilização para que todos os elementos que usam essa tag code fiquem com a cor de fundo darkgreen, o tamanho da fonte 20px. Só que agora eu quero que só esse ultimo exemplo não siga isso. Quero que só ele fique com a cor vermelha e como negrito (por algum motivo). 
+    </p>
+    <p>
+        Outra coisa muito legal que da pra fazer é colocar mais de uma classe ao mesmo tempo na hora de identificar o item. Eu consigo fazer algo tipo:
+        <pre>
+            <code>
+                .azul {
+                    color: blue;
+                }
+
+                .underline {
+                    text-decoration: underline;
+                }
+            </code>
+        </pre>
+        Aqui eu criei duas classes, uma que deixa o texto azul e a outra que coloca um underline no texto. Na hora de atribuir para um elemento eu posso simplesmente colocar o nome das duas no mesmo espaço e ele vai aplicar os dois, assim:
+        <pre>
+            <code>
+                &lt;h1 id="azul underline">0208 - Seletores CSS&lt;/h1>
+            </code>
+        </pre>
+        Justamente esse exemplo eu vou aplicar naquele h1 dessa nossa página. Pode reparar que ele ficou com as configurações das duas classes ao mesmo tempo.
+    </p>
+    <p id="final">
+        E é isso. Essa aula já me deu trabalho demais e agora eu vou descansar :D.
+    </p>
+</body>
+</html>
