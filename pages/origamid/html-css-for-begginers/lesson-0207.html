@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0207 - CSS Básico</title>
+    <link rel="stylesheet" href="../../../css/style0207.css">
+</head>
+<body>
+    <h1>
+        0207 - CSS Básico
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0206.html">Aula anterior</a> <br>
+    <!-- <a href="lesson-0207.html">Próxima Aula</a> -->
+    <p>
+        Além de criar um arquivo CSS, que é onde vão ficar as minhas configurações de estilo da página web, eu preciso criar um link entre esse arquivo e a página html que irá utilizar ele. Pra fazer isso eu utilizo a tag <strong>link</strong> que vai ser posicionada dentro da tag <strong>head</strong>.
+    </p>
+    <p>
+        Esse link vai possuir os atributos:
+        <ul>
+            <li>
+                rel: define o tipo de arquivo daquele link (nesse caso para CSS ou tipo é <em>stylesheet</em>)
+            </li>
+            <li>
+                href: define o caminho até aquele arquivo.
+            </li>
+        </ul>
+        <pre>
+            <code>
+                &lt;link rel="stylesheet" href="/style.css" />
+            </code>
+        </pre>
+    </p>
+    <h2>
+        Anatomia das CSS
+    </h2>
+    <p>
+        Explicando de forma mais textual, primeiro a gente define um SELETOR (item que vai sofrer as modificações) e abre e fecha chaves para grupar as estilizações dele, é o que chamamos de BLOCO. Dentro do bloco vamos primeiro definir a propriedade que queremos alterar, colocamos o sinal de ":" e logo na frente o valor daquela propriedade. Por fim fechamos com ";" no final de cada valor para que o navegador consiga entender que aquela propriedade acabou ali. Vou colocar um exemplo em código pra ficar mais claro.
+    </p>
+    <pre>
+        <code>
+            a {
+                color: red;
+                font-size: 24px;
+            }   
+        </code>
+    </pre>
+    <p>
+        No exemplo anterior o nosso seletor é o "a", ou seja, todas as configurações de estilo que eu aplicar dentro desse bloco serão aplicadas em todos os itens da tag "a" (âncoras) no documento HTML. Dentro do bloco então eu defini as propriedades "color" (indica a cor daquele item) e "font-size" (indica o tamanho da fonte) e depois coloquei os valores dessas propriedades, respectivamente "red" e "16px". Pra finalizar, cada proprieade com seu devido valor atribuido eu fecho a linha com ";" pra mostrar que o final dela é ali.
+    </p>
+    <p>
+        Agora eu vou criar esse arquivo CSS no meu projeto, vou linkar ele ness a página HTML e colocar exatamente as mesmas configurações desse exemplo. Quando eu fizer isso vocês vão reparar que os links que aparecem no topo da tela devem ficar com a cor vermelha e o tamanho de 24px na fonte.
+    </p>
+    <p>
+        Como eu havia falado, o link CSS tem que ficar dentro do head, então o começo do código da página HTML ficou assim:
+        <pre>
+            <code>
+                &lt;!DOCTYPE html>
+                &lt;html lang="pt-br">
+                &lt;head>
+                    &lt;meta charset="UTF-8">
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    &lt;title>0207 - CSS Básico</title>
+                    <strong>&lt;link rel="stylesheet" href="../../../css/style0207.css"></strong>
+                &lt;/head>
+            </code>
+        </pre>
+    </p>
+    <p>
+        Eu posso criar links para vários arquivos .css diferentes, cada um tendo suas devidas especificações. Pra isso, basta adicionar mais linhas de links iguais a essa, seguindo o mesmo padrão.
+    </p>
+    <h2>
+        Efeito Cascata
+    </h2>
+    <p>
+        Como o próprio nome já diz, Cascading Style Sheets (CSS), as alterações que eu configuro são aplicadas em efeito de cascata. Então se lá no começo meu arquivo CSS eu fizer uma configuração que vai afetar a tag "p" por exemplo, mudando a cor para AZUL, e depois eu crio um outro bloco pra essa mesma tag que vai alterar a mesma propriedade só que agora pra VERMELHO, assim:
+        <pre>
+            <code>
+                p {
+                    color: blue;
+                    font-size: 16px
+                }
+
+
+                p {
+                    color: red;
+                }
+            </code>
+        </pre>
+        No final, nesse exemplo a cor que vai prevalecer é a VERMELHA. O navegador vai aplicar as configurações que aparecem primeiro e se mais na frente aparecem a mesma configuração com outro valor, o que poderia gerar um certo conflito, na verdade ele vai sobrepor a antiga e manter a última.
+    </p>
+</body>
+</html>
