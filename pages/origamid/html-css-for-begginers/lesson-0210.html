@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Background e cores</title>
+</head>
+<body>
+    <style>
+        h1 {
+            background-color: rgb(138, 43, 226);
+            color: rgb(255, 182, 193);
+            }
+        
+        em {
+            color:blueviolet;
+        }
+
+        code {
+            color: #8a2be2;
+        }
+
+        h3 {
+            background-color: rgb(138, 43, 226);
+            color: rgb(255, 182, 193);
+        }
+
+
+    </style>
+    <h1>
+        0210 - Background e cores
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0209.html">Aula anterior</a> <br>
+    <!-- <a href="lesson-0211.html">Próxima Aula</a> -->
+    <h2>
+        Background
+    </h2>
+    <p>
+        Pra mudar a cor de fundo de um elemento eu posso usar a propriedade CSS chamada <em>background</em>. Ela é uma propriedade geral de background e que pode ser usada como atalho para agrupar valores diferentes de outras caracteristicas do background. Se eu quiser mexer apenas na cor eu posso usar <em>background-color</em>, mas os dois dão o mesmo resultado.
+    </p>
+    <p>
+        Como exemplo, eu vou mudar a cor de fundo do elemento h1 que é o nosso título ali em cima. Então eu vou usar essa código CSS aqui:
+        <pre>
+            <code>
+                h1 {
+                    background-color: blueviolet;
+                    color: lightpink;
+                }
+            </code>
+        </pre>
+        Adicionei a cor da fonte também pra dar mais contraste.
+    </p>
+    <h2>
+        Algumas formas de representar cores
+    </h2>
+    <p>
+        Além de escrever o nome da cor podemos também representar elas em formato Hexadecimal e RGB.
+    </p>
+    <h3>
+        Hexadecimal
+    </h3>
+    <p>
+        A cor é representada através de um código de 6 caracteres que podem ir de 0 a f (0 1 2 3 4 5 6 7 8 9 a b c d e f), por isso o nome Hexadecimal, pois são 16 caracteres possíveis, diferente do formato decimal que usamos no dia a dia, que só tem 10 opções de caracteres (0 1 2 3 4 5 6 7 8 9). O código vai sempre começar com o sinal de "#". Vou colocar outro exemplo do mesmo código anterior mas com as cores no formato hexadecimal.
+        <pre>
+            <code>
+                h1 {
+                    background-color: #8a2be2;
+                    color: #ffb6c1;
+                }
+            </code>
+        </pre>
+    </p>
+    <h3 style="color:rgb(255, 182, 193,0.6);">
+        RGB e RGBa
+    </h3>
+    <p>
+        O formato RGB se baseia na combinação das cores VERMELHO(Red), VERDE(Green) e AZUL(Blue), cada uma com sua determinada quantidade. A junção das quantidades das três vai gerar a cor que queremos. A cor blueviolet tem o código RGB como rgb(138, 43, 226), ou seja, o valor do vermelho é de 138, do verde é 43 e do azul é 226. Esses valores podem ir de 0 a 255, sendo o preto total o rgb(0,0,0) e o branco total o rgb(255,255,255).
+        <pre>
+            <code>
+                h1 {
+                    background-color: rgb(138, 43, 226);
+                    color: rgb(255, 182, 193,0.5);
+                }
+            </code>
+        </pre>
+    </p>
+    <p>
+        O "a" no final do RGB significa Alfa. Ele indica a transparência daquela cor, podendo ir de 1 (totalmente opaco) até o 0 (totalmente transparente). Vou aplicar nos dois subtitulos "Hexadecimal" e "RGB e RGBa" o mesmo padrão de cores, porém no primeiro será apenas rgb e no segundo com o uma transparência de 0.6 no "a" pra vermos a diferença em relação a transparência.
+    </p>
+</body>
+</html>
