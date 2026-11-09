@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0211 - Box Model 1</title>
+    <title>0211 - Box Model 1 e 2</title>
 </head>
 <body>
     <style>
@@ -12,18 +12,49 @@
             max-width: 600px;
         }
 
-        h1, h2, h3 {
+        h1, h2 {
             background-color: rgb(138, 43, 226);
             color: rgb(255, 182, 193);
         }
 
+        h3 {
+            background-color: rgb(215, 173, 253);
+            color: rgb(136, 0, 255);
+        }
+
+        div {
+            background-color: rgb(255, 0, 0);
+        }
+
+        #div2 {
+            background-color: red;
+            width: 300px;
+            padding: 30px;
+            border: 5px solid black;
+        }
+
+        #div3 {
+            background-color: orange;
+            width: 400px;
+            border: 5px solid black;
+            margin: 15px;
+        }
+
+        #div4 {
+            background-color: purple;
+            width: 300px;
+            border: 5px dotted orange;
+            margin: 30px;
+            color: orange;
+        }
+
     </style>
     <h1>
-        0211 - Box Model 1
+        0211 - Box Model 1 e 2
     </h1>
     <a href="../index.html">Voltar para o curso</a> <br>
     <a href="lesson-0210.html">Aula anterior</a> <br>
-    <!-- <a href="lesson-0212.html">Próxima Aula</a> -->
+    <a href="lesson-0212.html">Próxima Aula</a>
     <p>
         Na web os sites são construidos com base em um modelo de caixas. Todos os itens de um site são contidos dentro de caixas e o posicionamento dessas caixas no site é o que vai dando o formato dele.
     </p>
@@ -73,6 +104,40 @@
     </h3>
     <p>
         É a altura total da caixa, contando conteúdo + padding (top e bottom) + border (top e bottom)
+    </p>
+    <h2>Div</h2>
+    <p>
+        Nessa aula foi mostrada uma tag que vai ajudar muito a entender o modelo de caixas, que é a tag &lt;div>. Essa tag serve para criar uma Divisão no conteúdo. Eu posso criar uma div aqui embaixo e ela vai se comportar como um bloco. Tem outros elementos que tem comportamente inline, mas isso vai ser explicado só mais na frente.
+    </p>
+    <div>
+        teste
+    </div>
+    <p>
+        Criei essa div com a palavra "teste" sendo o conteúdo dela e podemos ver que os elementos de bloco tem esse comportamento de ir de um lado até o outro da tela, porque por padrão o atributo width dele é auto, então ele vai pegar sempre a largura total da tela por padrão. Se prestarmos atenção, na estilização que eu fiz nos títulos e substítulos, podemos notar que ela vai de um lado ao outro da tela, porque o elemento de título se comporta como bloco. Quando eu não defino os valores para os atributos daquele elemento de bloco ele fica com o tamanho do conteúdo que tem dentro dele.
+    </p>
+    <div id="div2">
+        teste
+    </div>
+    <p>
+        Agora eu adicionei um tamanho fixo de 300px e um padding de 30px, então ele vai ficar com esse espaço interno agora como uma folga em relação a borda. Também adicionei uma borda de 5px pra facilitar a visualização. Quando for definir a borda, eu posso definir primeiro o tamanho, depois o estilo dela (solid) e por fim a cor. Nesse caso os valores que coloquei no atribuito border ficou assim: 
+        <pre>
+            <code>
+                border: 5x solid black;
+            </code>
+        </pre>
+    </p>
+    <div id="div3">
+        teste1
+    </div>
+    <div id="div4">
+        teste2
+    </div>
+    <p>
+        Nesse exemplo de cima eu defini cor de fundo, tamanho e bordas diferentes para cada div. Além disso eu defini uma margin de 15px na primeira e de 30px na segunda, porém se formos medir a distância entre a div laranja e a div roxa vão haver 30px, e não uma soma das duas margens. Isso acontecem porque as margens de elementos podem concorrer sem problemas e o objeto que tiver a maior margem entre eles é o que vai ditar a distãncia. Por isso ela ficou como 30px, pois é a margem maior entre as duas.
+    </p>
+    <h2>Detalhe</h2>
+    <p>
+        Esses valores de padding e margin eu posso definir tanto para todos os lados, quanto apenas para algum especifico. Então isso me da mais liberdade na hora de posicionar os itens na página HTML.
     </p>
 </body>
 </html>
