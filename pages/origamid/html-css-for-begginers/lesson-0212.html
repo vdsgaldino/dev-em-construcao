@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0212 - Estilos do Browser</title>
+</head>
+<body>
+    <style>
+        h1 {
+            background-color: blue;
+            color: white;
+        }
+
+        h2 {
+            color: blue;
+        }        
+    </style>
+    <h1>
+        0212 - Estilos do Browser
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0211.html">Aula anterior</a> <br>
+    <!-- <a href="lesson-0213.html">Próxima Aula</a> -->
+    <p>
+        Por padrão, todo browser (navegador) já aplica algumas configurações CSS em alguns elementos. Por isso que quando eu crio um item e defino ele como sendo um h1 o browser já deixa ele com a letra maior, por exemplo. Eu consigo ver essas pré-configurações no meu navegador se eu for no item que eu quero ver, clicar com o botão direito e ir em "Inspecionar". Feito isso ele vai me mostrar as ferramentos de desenvolvedor e lá na aba de Estilos eu consigo ver os estilos que já foram aplicados por padrão.
+    </p>
+    <img src="../../../assets/images/origamid/html-css-for-begginers/0212/default-css-browers-example.png" alt="Exemplo configuração CSS Padrão Chrome">
+    <p>
+        Na imagem da pra ver as configurações que ele já aplica e se eu quiser eu posso remover isso depois, ou alterar no meu código.
+    </p>
+    <p>
+        Os navegadores tentam ao máximo padronizar esses estilos iniciais, mas nem sempre é possível. Então pode ser que pra tag h1 no Chrome e no Firefox tenham algumas diferenças nessas configurações padrão iniciais. Por isso foram desenvolvidas algumas alternativas para contornar isso.
+    </p>
+    <h2>
+        Reset
+    </h2>
+    <p>
+        O reset tem como objetivo justamente resetar essas configurações iniciais dos navegadores pra tentar manter uma compatilibilidade melhor. Então ele é basicamente um código CSS que vai remover todas essas formatações iniciais no documento completo, ai depois disso eu poderia ir lá e fazer as minhas formatações. Um dos mais famosos utilizados fica nesse site aqui: <a href="https://meyerweb.com/eric/tools/css/reset/index.html">https://meyerweb.com/eric/tools/css/reset/index.html</a>
+    </p>
+    <h2>
+        Normalize
+    </h2>
+    <p>
+        O normalize já tentava não remover esses estilos iniciais porque considerava eles importantes, então tentava apenas normalizar os estilos entre os navegadores    
+    </p>
+    <h2>
+        Reboot
+    </h2>
+    <p>
+        O reboot seria tipo uma mistura dos dois: ele remove alguns estilos e tenta normalizar outros
+    </p>
+    <p>
+        Nesse curso ele não vai utilizar esses recursos, vamos fazer essas formatações manualmente mesmo.
+    </p>
+    <h2>
+        Inherit (Herança)
+    </h2>
+    <p>
+        Existem algumas propriedades das CSS que são passadas de pai para filho, como uma herança. Por exemplo: color, font-size, font-family... Então, se eu definir um color como vermelho no body de um documento, todos os filhos também receberam esse mesmo valor de color.
+    </p>
+    <p>
+        Um detalhe muito importante é que: <strong>se o elemento já possui um valor padrão para aquele atributo, a herança não vai afetar ele.</strong> Por exemplo, se eu criar uma pagina html nova e incluir nela um "h1", "p" e um "a" (link) e definir que a color do body vai ser red, ele vai afetar apenas o h1 e o p, mas não vai mudar a cor do "a" porque ela já é definida como padrão sendo a cor azul. Pra eu fazer ele herdar a cor eu tenho duas formas:
+        <ol>
+            <li>
+                criar um novo seletor para aquele item que não herdou a cor e definir a mesma cor pra ele
+            </li>
+            <li>
+                no novo seletor dele eu defino o valor "inherit", ou seja, herança. Então eu digo que aquele item deve herdar do pai o mesmo valor para ele. Isso faz com que eu precise ajustar apenas no pai e o valor já vai ser repetir nos filhos.
+            </li>
+        </ol>
+    </p>
+</body>
+</html>
