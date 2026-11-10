@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0213 - Display</title>
+</head>
+<body>
+    <style>
+        div {
+            background-color: rgb(196, 196, 196);
+            max-width: 500px;
+            border: 2px solid blue;
+        }
+
+        span {
+            color: red;
+            border: 1px solid red;
+        }
+
+        div p {
+            color: darkmagenta;
+            border: 1px solid darkmagenta;
+        }
+
+        a {
+            border: 1px solid blue;
+
+        }
+    </style>
+    <h1>
+        0213 - Display
+    </h1>
+    <a href="../index.html">Voltar para o curso</a> <br>
+    <a href="lesson-0212.html">Aula anterior</a> <br>
+    <a href="lesson-0214.html">Próxima Aula</a>
+     <h2>
+        Fluxo do Layout
+     </h2>
+     <p>
+        O fluxo do layout funciona de acordo com o modo de escrita definido. Então a ordem vai ser geralmente de cima pra baixo e da esquerda para direita. Os elementos de mesma linha (inline) tendem a se comportar se posicionando ao lado, enquanto os elementos de bloco (block) sempre saltam a linha. Por exemplo:
+     </p>
+     <div>
+         "texto puro sem tag"
+         <span>"novo texto span</span>
+         <a href="#">"novo link teste"</a>
+         <p>
+            Teste de parágrafo
+         </p>
+     </div>
+     <p>Eu escrevi acima um texto puro sem adicionar nenhuma tag nele, logo abaixo no código eu inclui um texto com a tag span, que é uma tag genérica que usamos quando queremos aplicar alguma alteração em um item muito especifico e por fim coloquei um link. Por terem comportamento de display inline ele se posicionam por padrão na mesma linha. Já abaixo deles eu adicionei um parágrafo e esse parágrafo não continuou na mesma linha pois o comportamento dele é display block, então ele salta a linha e aparece abaixo do primeiro texto.
+     </p>
+     <h2>
+        Display inline e block
+    </h2>
+    <h3>
+        Display Inline
+    </h3>
+    <p>
+        Respeita o fluxo da escrita sem iniciar uma nova linha. Pra ele eu não consigo definir valores de largura (width), altura (height), margem (margin)...etc. Esse é o estilo padrão dos elementos.
+    </p>
+    <h3>
+        Display Block
+    </h3>
+    <p>
+        Ele inicia uma nova linha e não permite que outros elementos sejam posicionados em sua linha. Ele aceita todas as propriedades do box model e é o estilo inicial de alguns elementos como h1, p, div e etc.
+    </p>
+    <h3>
+        Display None
+    </h3>
+    <p>
+        Aqui ele remove a visualização do elemento completamente da tela. Deixa ele invisível.
+    </p>
+    <h3>
+        Display Inline-block
+    </h3>
+    <p>
+        No inline-block ele continua sendo um elemento inline mas passa a poder receber as propriedades do box model (width, height...)
+    </p>
+</body>
+</html>
